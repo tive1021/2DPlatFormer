@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Player : DestroySingleton<Player>
 {
+    public int coinAmount = 0;
 
     protected override void Awake()
     {
