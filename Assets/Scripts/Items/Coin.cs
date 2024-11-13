@@ -6,7 +6,7 @@ public class Coin : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Player.Instance.coinAmount++;
+        GameManager.Instance.coinAmount++;
         Destroy(gameObject);
     }
 }
