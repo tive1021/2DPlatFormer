@@ -10,3 +10,4 @@
 카메라 플레이어 따라 이동
 플레이어 collider box -> capsule
 맵 제작 (2차)
+플레이어 health 제작 진행중
