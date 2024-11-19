@@ -4,14 +4,18 @@ using UnityEngine;
 public class Health : MonoBehaviour, IItem
 {
     [SerializeField] float moveSpeed = 10f;    // 이동 속도
-    [SerializeField] float groundCheckDistance = 1f; // 지면 체크 거리
 
-    private Rigidbody2D rb;        // Rigidbody2D 컴포넌트
+    private Rigidbody2D rb;
+    private Collider2D col;
+
     private bool isMoving = false;  // 이동 활성화 여부
 
-    void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+        rb.gravityScale = 0f;
+        col.isTrigger = true;
     }
 
     public void GetItem()
@@ -20,6 +24,8 @@ public class Health : MonoBehaviour, IItem
         if (!isMoving)
         {
             isMoving = true;
+            rb.gravityScale = 1f;
+            col.isTrigger = false;
             transform.position += Vector3.up;
             StartCoroutine(MoveRoutine()); // 코루틴으로 이동 시작
         }

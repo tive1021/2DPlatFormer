@@ -6,6 +6,12 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI coinLabelText;
+    private Player player;
+
+    private void Awake()
+    {
+        player = Player.Instance;
+    }
 
     private void Update()
     {
