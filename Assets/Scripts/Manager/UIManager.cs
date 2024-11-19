@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class UIManagaer : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    [SerializeField] GameObject HealthLabel;
-
     [SerializeField] TextMeshProUGUI coinLabelText;
 
     private void Update()

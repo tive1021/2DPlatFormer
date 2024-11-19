@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : Singleton<GameManager>
 {
     [HideInInspector]
-    public int coinAmount = 0;    
+    public int coinAmount = 0; 
 
     protected override void Awake()
     {

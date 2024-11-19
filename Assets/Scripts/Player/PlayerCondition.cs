@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerCondition : MonoBehaviour
 {
-    public int health = 3;
-    [SerializeField] private int maxHealth = 5;
+    public int health = 2;
+    [SerializeField] private int maxHealth = 3;
 
     public void Heal()
     {
