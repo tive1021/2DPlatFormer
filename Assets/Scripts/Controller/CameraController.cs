@@ -22,6 +22,6 @@ public class CameraController : MonoBehaviour
             cameraPosX = mapLeftEnd;
         else if (cameraPosX >= mapRightEnd)
             cameraPosX = mapRightEnd;
-        transform.position = new Vector3(cameraPosX, 0, -10);
+        transform.position = new Vector3(cameraPosX, 5, -10);
     }
 }
